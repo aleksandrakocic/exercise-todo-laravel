@@ -10,7 +10,9 @@
   <div>
       <nav>
           <a href="/">home</a>
+          <a href="/create">Create todo</a>
           <a href="/todos">Todo list</a>
+
       </nav>
   </div>
 

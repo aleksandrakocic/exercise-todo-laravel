@@ -3,7 +3,7 @@
 
 @section('content')
 
-  <div>
+  {{-- <div>
         <table>
                 <tr>
                 <th>title</th>
@@ -20,7 +20,15 @@
                  @endforeach
                 </tr>
         </table>
-  </div>
+  </div> --}}
 
+<div>
+  <ul>
+    @foreach ($todos as $todo)
+    <li> <a href="/todos/ {{ $todo->id }}"> {{ $todo->title}}</a>  {{$todo->date}}  {{$todo->status}} </li>
+
+    @endforeach
+  </ul>
+</div>
 
 @endsection

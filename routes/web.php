@@ -15,11 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/todos', function() {
-    $todos = App\Todo::all();
-    return view('todos', compact('todos'));
-});
-Route::get('/todos/{id}', function($id) {
-    $todo = App\Todo::find($id);
-    return view('todosid', compact('todo'));
-});
+Route::get('todos', 'TodosController@index');
+
+Route::get('/todos/{id}', 'TodosController@show');
+
+Route::get('todos/create','TodosController@create');
+
